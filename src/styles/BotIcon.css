@@ -1,0 +1,33 @@
+.bot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1d3054;
+  color: white;
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  align-items: center;
+  display: flex;
+}
+
+.bot-icon:hover {
+  transform: scale(1.1);
+  background-color: #026937;
+  color: #0c162d;
+}
+
+.chat-support-wrapper {
+  position: fixed;
+  bottom: 90px; /* Adjust to appear above the bot icon */
+  right: 20px;
+  z-index: 1100; /* Higher than the bot icon */
+}
+.agent-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

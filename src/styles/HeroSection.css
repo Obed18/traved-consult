@@ -1,0 +1,63 @@
+:root {
+  --helene: "HeleneHess-Regular", fallback-1, fallback-2, fallback-3, serif;
+  --jost: "Jost", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  --accent: #d8b22a;
+}
+.hero-root * {
+  box-sizing: border-box;
+}
+
+.hero-root {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--jost);
+  color: #fff;
+  overflow: hidden;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* Video / media */
+.hero-video-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+.hero-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 8%,
+    rgba(0, 0, 0, 0.6) 60%
+  );
+}
+
+.chev-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+/* Accessibility focus */
+.icon-btn:focus,
+.lang-btn:focus,
+.chev-btn:focus,
+.book-btn:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+
+/* End of CSS */

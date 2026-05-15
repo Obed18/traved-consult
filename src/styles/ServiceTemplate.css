@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.ua-section {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  padding: 80px 20px;
+  color: #111;
+  margin-top: 5rem;
+}
+
+.ua-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ua-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ua-eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #888;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.ua-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.ua-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.ua-block {
+  margin-bottom: 50px;
+}
+
+.ua-heading {
+  font-size: 22px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.ua-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+  max-width: 900px;
+}
+
+.ua-process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.ua-process-item h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.ua-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.ua-bullet-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.ua-why {
+  margin-top: 10px;
+}
+
+.ua-get-started {
+  padding-top: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .ua-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ua-header {
+    text-align: left;
+  }
+
+  .ua-subtitle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ua-section {
+    padding: 60px 16px;
+  }
+
+  .ua-title {
+    font-size: 30px;
+  }
+
+  .ua-heading {
+    font-size: 20px;
+  }
+}

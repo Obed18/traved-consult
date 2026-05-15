@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.why-traved {
+  width: 100%;
+  padding: 6rem 5%;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.why-traved-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* LEFT */
+.why-left {
+  max-width: 650px;
+}
+
+.why-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.why-text {
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #6b6b6b;
+}
+
+.why-text .bold {
+  font-weight: 700;
+  color: #000000;
+}
+
+.why-text .highlight {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* RIGHT */
+.why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.05rem;
+  color: #6b6b6b;
+}
+
+.why-list svg {
+  color: #1a1a1a;
+  flex-shrink: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .why-traved-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .why-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-traved {
+    padding: 4rem 1.2rem;
+  }
+
+  .why-text {
+    font-size: 1.3rem;
+  }
+
+  .why-list li {
+    font-size: 0.95rem;
+  }
+}

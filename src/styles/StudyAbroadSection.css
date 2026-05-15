@@ -1,0 +1,92 @@
+.study-section {
+  padding: 80px 20px;
+  background: #f9fbfa;
+}
+
+.study-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* LEFT TEXT */
+.study-text {
+  flex: 1;
+}
+
+.study-text h2 {
+  font-size: 2.2rem;
+  color: #026937;
+  margin-bottom: 20px;
+}
+
+.study-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* COUNTRY LIST */
+.country-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.country-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #026937;
+}
+
+/* RIGHT CARDS */
+.study-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card h4 {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #026937;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(2, 105, 55, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .study-container {
+    flex-direction: column;
+  }
+
+  .study-cards {
+    grid-template-columns: 1fr;
+  }
+}

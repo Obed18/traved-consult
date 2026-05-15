@@ -1,0 +1,27 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+
+    "jsx": "react-jsx",
+
+    "moduleResolution": "bundler",
+
+    "target": "es6",
+    "module": "esnext",
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "ignoreDeprecations": "6.0"
+  }
+}

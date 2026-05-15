@@ -1,0 +1,140 @@
+/* BlogSection.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.blog-section {
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.blog-featured-text {
+  flex: 1;
+}
+
+.blog-featured-img {
+  width: 50%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.blog-badge {
+  background-color: #ffe600;
+  color: #333;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.blog-featured-text h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-featured-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.blog-meta {
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.blog-read-more {
+  background-color: #004d40;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.blog-read-more:hover {
+  background-color: #00695c;
+}
+
+.blog-latest-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-article-card {
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-article-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-tag {
+  background-color: #004d40;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.blog-article-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-read-more-small {
+  font-size: 0.85rem;
+  color: #004d40;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-read-more-small:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .blog-featured {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog-featured-img {
+    width: 100%;
+  }
+  .blog-featured {
+    flex-direction: column-reverse;
+  }
+}
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}

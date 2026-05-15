@@ -1,0 +1,179 @@
+/* SpecialtySection.css */
+
+.specialty-section {
+  position: relative;
+  width: 100%;
+  padding: 7rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    #81fcc0 0%,
+    #27eb8c 50%,
+    #adefcf 100%
+  );
+  overflow: hidden;
+}
+
+.specialty-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.08),
+    transparent 35%
+  );
+}
+
+.specialty-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.specialty-content {
+  color: #000;
+}
+
+.specialty-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  font-size: 0.9rem;
+  margin-bottom: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.specialty-content h2 {
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.3rem;
+}
+
+.specialty-content h2 span {
+  color: #026937;
+}
+
+.specialty-content p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: rgba(5, 5, 5, 0.82);
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+.specialty-btn {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #031b34;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.specialty-btn:hover {
+  transform: translateY(-2px);
+}
+
+.specialty-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.specialty-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.244);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.specialty-card::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  top: -40px;
+  right: -40px;
+}
+
+.specialty-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #026937;
+  margin-bottom: 1.3rem;
+}
+
+.specialty-card h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.specialty-card p {
+  color: #026937;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.specialty-card:hover {
+  border-color: rgba(125, 232, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .specialty-container {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-content {
+    text-align: center;
+  }
+
+  .specialty-content p {
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .specialty-section {
+    padding: 5rem 1rem;
+  }
+
+  .specialty-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .specialty-card {
+    padding: 1.7rem;
+  }
+
+  .specialty-content h2 {
+    font-size: 2.3rem;
+  }
+}

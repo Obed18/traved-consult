@@ -1,0 +1,154 @@
+/* Wrapper */
+.pps-wrapper {
+  font-family: "Poppins", sans-serif;
+  background: #f3f4f6;
+  padding: 80px 20px;
+  margin-top: 5rem;
+}
+
+.pps-section {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+.pps-section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 32px;
+  color: #111827;
+}
+
+/* Grid */
+.pps-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.pps-services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Cards */
+.pps-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 130px;
+  transition: all 0.25s ease;
+}
+
+.pps-card-title {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.pps-card-price {
+  font-weight: 600;
+  color: #111827;
+}
+
+.pps-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Button */
+.pps-btn {
+  margin-top: 18px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pps-btn:hover {
+  background: #111111;
+}
+
+/* Summary */
+.pps-summary {
+  background: #ffffff;
+  border: 2px solid #0f766e;
+  border-radius: 12px;
+  padding: 26px;
+  height: fit-content;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.pps-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pps-summary-header p {
+  font-size: 14px;
+  color: #374151;
+}
+
+.pps-summary-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.pps-includes-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pps-includes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pps-includes li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 1024px) {
+  .pps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pps-summary {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .pps-services {
+    grid-template-columns: 1fr;
+  }
+
+  .pps-section-title {
+    font-size: 22px;
+  }
+
+  .pps-wrapper {
+    padding: 60px 16px;
+  }
+}

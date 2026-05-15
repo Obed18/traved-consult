@@ -1,0 +1,119 @@
+.slide-hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: #22434351;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  padding: 2rem 4rem;
+  z-index: 2;
+  background-color: #ffffff;
+  margin-left: 2rem;
+}
+
+.hero-content h1 {
+  color: #026937;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 0.8rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: #333;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  position: absolute;
+  bottom: 20%;
+  background: #026937;
+  border: none;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-left: 2rem;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.08);
+  background: #182c2c;
+}
+
+.nav-arrow.left {
+  left: 1.5rem;
+}
+
+.nav-arrow.right {
+  left: 4.8rem;
+}
+
+/* Indicators */
+.hero-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #bbb;
+  transition: background 0.3s ease;
+}
+
+.indicator.active {
+  background: #026937;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 95vh;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .nav-arrow.left {
+    left: 1rem;
+  }
+
+  .nav-arrow.right {
+    left: 4.2rem;
+  }
+
+  .hero-indicators {
+    left: 1.5rem;
+  }
+}

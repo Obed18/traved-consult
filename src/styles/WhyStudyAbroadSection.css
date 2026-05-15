@@ -1,0 +1,94 @@
+/* ================= CSS (WhyStudyAbroadSection.css) ================= */
+
+.why-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("https://www.aeaweb.org/content/file?id=13713"); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.content-card {
+  position: relative;
+  background: #ffffffd4;
+  max-width: 760px;
+  width: 100%;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  margin-left: clamp(0rem, 5vw, 4rem);
+}
+
+.title {
+  color: #026937;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.reasons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.1rem;
+}
+
+.reason-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.icon-wrap {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #22434328;
+  color: #026937;
+  flex-shrink: 0;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 768px) {
+  .content-card {
+    padding: 2rem 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .reason-item {
+    font-size: 0.9rem;
+  }
+}

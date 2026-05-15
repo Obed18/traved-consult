@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.courier-header {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+.courier-topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 1rem;
+  background-color: #122a2a;
+  font-size: 14px;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.courier-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.courier-contact .icon {
+  color: #666;
+}
+
+.courier-support {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  transition: background-color 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: #026937;
+}
+
+.navbar.scrolled {
+  background-color: #026937;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-logo-img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* ===================== CENTER LINKS ===================== */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* ===================== RIGHT BUTTONS (DESKTOP ONLY) ===================== */
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+/* ===================== DROPDOWN ===================== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  white-space: nowrap;
+  color: #000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* ===================== BUTTONS ===================== */
+.signin-link {
+  text-decoration: none;
+  color: #026937;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 10px 16px;
+}
+.signin-link2 {
+  text-decoration: none;
+  color: #FFF;
+  font-weight: 600;
+  background-color: #026937;
+  padding: 10px 16px;
+  margin-top: 1.5rem;
+  border: none;
+}
+
+
+.book-btn {
+  padding: 10px 16px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+/* ===================== MOBILE MENU ICON ===================== */
+.mobile-menu-icon {
+  display: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  background: transparent;
+  border: none;
+}
+
+/* ===================== MOBILE SIDEBAR ===================== */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #224343;
+  padding: 2rem 1.5rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-sidebar ul li {
+  margin-bottom: 1rem;
+}
+
+.mobile-sidebar ul li a,
+.mobile-sidebar ul li span {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+}
+
+/* ===================== SIDEBAR BUTTONS ===================== */
+.mobile-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* ===================== OVERLAY ===================== */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 999;
+}
+
+/* ===================== SIDEBAR CLOSE ICON ===================== */
+.sidebar-close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet & Mobile */
+@media (max-width: 1024px) {
+  .nav-right {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 768px) {
+  .mobile-buttons {
+    flex-direction: column;
+  }
+
+  .mobile-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Hide desktop nav links/buttons on mobile */
+@media (max-width: 768px) {
+  .courier-topbar {
+    display: none;
+  }
+}
+
+.dropdown{
+  color: #fff !important;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dropdown-link {
+  color: #000 !important;
+}
