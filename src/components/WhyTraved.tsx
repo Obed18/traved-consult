@@ -45,16 +45,6 @@ const WhyTravedSection = () => {
           <Link to="/book" className="signin-link2">
             APPLY NOW
           </Link>
-
-        {/* Right List */}
-        <motion.ul className="why-list" variants={containerVariants}>
-          {["Personalized guidance", "Proven success track", "Access to top institutions", "Expert visa and migration support"].map((item, index) => (
-            <motion.li key={index} variants={itemVariants}>
-              <Check size={18} strokeWidth={2.5} />
-              <span>{item}</span>
-            </motion.li>
-          ))}
-        </motion.ul>
       </motion.div>
     </section>
   );

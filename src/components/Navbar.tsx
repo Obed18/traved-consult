@@ -168,7 +168,7 @@ const Navbar: React.FC = () => {
         {/* RIGHT BUTTONS */}
         <div className="nav-right">
           <Link to="/book" className="signin-link">
-            APPLY NOW
+            BOOK NOW
           </Link>
           <Link to="/contact" className="book-btn">
             CONTACT US
@@ -282,7 +282,7 @@ const Navbar: React.FC = () => {
 
               <div className="mobile-buttons">
                 <a className="signin-link" href="#apply">
-                  APPLY NOW
+                  BOOK NOW
                 </a>
                 <a className="book-btn" href="#contact">
                   CONTACT US

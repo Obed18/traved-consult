@@ -15,7 +15,7 @@ const BotIcon: React.FC<BotIconProps> = ({ showChat, toggleChat }) => {
           React.createElement(LuX as any, { size: 28 })
         ) : (
           <img
-            src="https://img.freepik.com/premium-photo/close-up-cartoon-character-wearing-headset-tie_988987-24244.jpg?w=2000"
+            src="/bot-avatar.jpg"
             className="agent-image"
           />
         )}

@@ -6,8 +6,8 @@
   padding: 7rem 1.5rem;
   background: linear-gradient(
     135deg,
-    #81fcc0 0%,
-    #27eb8c 50%,
+    #d0f6e4 0%,
+    #92deb9 50%,
     #adefcf 100%
   );
   overflow: hidden;
@@ -128,7 +128,7 @@
 
 .specialty-card h3 {
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #ffffff;
+  color: #333;
   font-weight: 800;
   margin-bottom: 0.6rem;
 }
