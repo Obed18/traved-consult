@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --traved-navy: #0d383b;
+  --traved-navy-dark: #092c2f;
+  --traved-teal: #0d383b;
+  --traved-teal-light: #41676a;
+  --traved-gold: #f4b400;
+
+  --traved-text: #122f32;
+  --traved-muted: #6e7b7d;
+  --traved-border: #e2e7e7;
+  --traved-bg: #f7f9f8;
+  --traved-white: #ffffff;
+
+  --traved-radius: 24px;
+}
+
+.traved-contact {
+  position: relative;
+  width: 100%;
+  padding: 85px 24px 100px;
+  background: #f8f9f9;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  color: var(--traved-text);
+}
+
+/* Decorative background */
+.traved-contact__background-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: #f0f2f2;
+  z-index: 0;
+}
+
+/* Container */
+.traved-contact__container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* Heading */
+.traved-contact__heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.traved-contact__eyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: var(--traved-teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.traved-contact__heading h2 {
+  margin: 0;
+  color: var(--traved-navy);
+  font-size: clamp(32px, 4vw, 45px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+}
+
+.traved-contact__heading p {
+  max-width: 650px;
+  margin: 13px auto 0;
+  color: #697779;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Main Card */
+.traved-contact__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(330px, 0.75fr);
+  gap: 0;
+
+  background: var(--traved-white);
+  border-radius: var(--traved-radius);
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(12, 44, 46, 0.08),
+    0 4px 20px rgba(12, 44, 46, 0.04);
+}
+
+/* =========================================
+   FORM AREA
+========================================= */
+
+.traved-contact__form-area {
+  padding: 42px 45px 38px;
+}
+
+.traved-contact__form-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 31px;
+}
+
+.traved-contact__form-icon {
+  flex: 0 0 39px;
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+  background: #edf5f4;
+  color: var(--traved-teal);
+}
+
+.traved-contact__form-header h3 {
+  margin: 0 0 4px;
+  color: #19383a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.traved-contact__form-header p {
+  max-width: 520px;
+  margin: 0;
+  color: #798586;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Form grid */
+.traved-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 17px;
+}
+
+/* Field */
+.traved-field {
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+.traved-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #263b3d;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.traved-field label span {
+  color: #d46b56;
+}
+
+/* Inputs */
+.traved-field input,
+.traved-field select,
+.traved-field textarea {
+  width: 100%;
+  border: 1px solid var(--traved-border);
+  outline: none;
+  background: #fff;
+
+  color: #314345;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.traved-field input,
+.traved-field select {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 24px;
+}
+
+.traved-field textarea {
+  min-height: 91px;
+  padding: 14px 16px;
+  resize: vertical;
+  border-radius: 15px;
+  line-height: 1.6;
+}
+
+.traved-field input::placeholder,
+.traved-field textarea::placeholder {
+  color: #9ca6a7;
+}
+
+.traved-field input:focus,
+.traved-field select:focus,
+.traved-field textarea:focus {
+  border-color: rgba(13, 56, 59, 0.45);
+  background: #fcfefe;
+
+  box-shadow:
+    0 0 0 3px rgba(13, 56, 59, 0.07);
+}
+
+/* Icon input */
+.traved-input-icon {
+  position: relative;
+}
+
+.traved-input-icon > svg {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #829091;
+  pointer-events: none;
+}
+
+.traved-input-icon input,
+.traved-input-icon select {
+  padding-left: 41px;
+}
+
+.traved-input-icon select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Date */
+.traved-field--deadline {
+  max-width: 50%;
+}
+
+/* Form bottom */
+.traved-form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.traved-form-bottom p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  margin: 0;
+
+  color: #7b8889;
+  font-size: 10px;
+}
+
+.traved-form-bottom p svg {
+  color: #3d7c6e;
+}
+
+/* Submit */
+.traved-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-width: 145px;
+  height: 43px;
+
+  padding: 0 21px;
+  border: 0;
+  border-radius: 25px;
+
+  background: var(--traved-navy);
+  color: #fff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(13, 56, 59, 0.14);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.traved-submit:hover {
+  background: var(--traved-navy-dark);
+}
+
+/* =========================================
+   RIGHT INFORMATION PANEL
+========================================= */
+
+.traved-contact__info {
+  position: relative;
+  min-height: 100%;
+  margin: 22px 22px 22px 0;
+  border-radius: 22px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(244, 180, 0, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      145deg,
+      #103f42 0%,
+      #0d383b 55%,
+      #092f32 100%
+    );
+
+  color: white;
+}
+
+.traved-contact__info-content {
+  position: relative;
+  height: 100%;
+  padding: 34px 28px 27px;
+}
+
+/* decorative glow */
+.traved-contact__info::before {
+  content: "";
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  right: -80px;
+  bottom: -70px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.traved-contact__mini-label {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.traved-contact__info-top h3 {
+  margin: 0;
+
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.traved-contact__info-top p {
+  margin: 12px 0 24px;
+
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* Contact detail cards */
+.traved-contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.traved-contact__detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 58px;
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.045);
+
+  color: #fff;
+  text-decoration: none;
+
+  backdrop-filter: blur(7px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.traved-contact__detail:hover {
+  background: rgba(255, 255, 255, 0.21);
+}
+
+.traved-contact__detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex: 0 0 32px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.11);
+  color: #fff;
+}
+
+.traved-contact__detail > span:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.traved-contact__detail strong {
+  margin-bottom: 2px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.traved-contact__detail small {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Location */
+.traved-contact__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-top: 18px;
+  padding-top: 17px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.17);
+
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.traved-contact__location svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #f4b400;
+}
+
+/* Social */
+.traved-contact__social {
+  margin-top: 19px;
+}
+
+.traved-contact__social-line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.traved-contact__social p {
+  margin: 0 0 11px;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.traved-social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.traved-social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  color: #fff;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.traved-social-links a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+  .traved-contact {
+    padding: 70px 20px 80px;
+  }
+
+  .traved-contact__card {
+    grid-template-columns: minmax(0, 1.5fr) minmax(290px, 0.8fr);
+  }
+
+  .traved-contact__form-area {
+    padding: 36px 32px;
+  }
+
+  .traved-contact__info-content {
+    padding: 29px 22px;
+  }
+}
+
+/* =========================================
+   MOBILE / SMALL TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .traved-contact {
+    padding: 65px 18px 70px;
+  }
+
+  .traved-contact__background-shape {
+    height: 150px;
+  }
+
+  .traved-contact__heading {
+    margin-bottom: 30px;
+  }
+
+  .traved-contact__heading p {
+    max-width: 540px;
+    font-size: 12px;
+  }
+
+  .traved-contact__card {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+
+  .traved-contact__form-area {
+    padding: 32px 25px;
+  }
+
+  .traved-contact__info {
+    min-height: auto;
+    margin: 0 18px 18px;
+  }
+
+  .traved-contact__info-content {
+    padding: 30px 25px;
+  }
+
+  .traved-form-grid {
+    gap: 16px;
+  }
+
+  .traved-field--deadline {
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .traved-contact {
+    padding: 50px 13px 60px;
+  }
+
+  .traved-contact__heading h2 {
+    font-size: 32px;
+  }
+
+  .traved-contact__heading p {
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .traved-contact__card {
+    border-radius: 18px;
+  }
+
+  .traved-contact__form-area {
+    padding: 27px 19px;
+  }
+
+  .traved-contact__form-header {
+    margin-bottom: 25px;
+  }
+
+  .traved-contact__form-header h3 {
+    font-size: 15px;
+  }
+
+  .traved-contact__form-header p {
+    font-size: 9px;
+  }
+
+  .traved-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .traved-field {
+    margin-bottom: 16px;
+  }
+
+  .traved-field input,
+  .traved-field select {
+    height: 45px;
+  }
+
+  .traved-field textarea {
+    min-height: 105px;
+  }
+
+  .traved-form-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .traved-form-bottom p {
+    justify-content: center;
+  }
+
+  .traved-submit {
+    width: 100%;
+    height: 46px;
+  }
+
+  .traved-contact__info {
+    margin: 0 10px 10px;
+    border-radius: 17px;
+  }
+
+  .traved-contact__info-content {
+    padding: 27px 20px 24px;
+  }
+
+  .traved-contact__info-top h3 {
+    font-size: 17px;
+  }
+
+  .traved-contact__info-top p {
+    font-size: 9px;
+  }
+
+  .traved-contact__detail {
+    min-height: 56px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+  .traved-contact {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .traved-contact__form-area {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .traved-contact__info {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .traved-contact__info-content {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .traved-contact__heading h2 {
+    font-size: 29px;
+  }
+}

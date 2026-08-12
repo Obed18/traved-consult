@@ -23,8 +23,7 @@ const Services: React.FC = () => {
 
   return (
     <div className="home">
-      {/* Background blur wrapper */}
-      <div className={`main-content ${showChat ? "blurred" : ""}`}>
+      <div className= "main-content">
         <Navbar />
         {selectedService ? (
           <ServiceTemplate service={selectedService} />
@@ -34,14 +33,9 @@ const Services: React.FC = () => {
         <Footer />
       </div>
 
-      {/* Chat Support and Bot Icon */}
-      {showChat && (
-        <div className="chat-support-wrapper">
-          <ChatSupport onClose={toggleChat} />
-        </div>
-      )}
-
-      <BotIcon showChat={showChat} toggleChat={toggleChat} />
+      <a href="https://wa.me/+233549213246" target="_blank" rel="noopener noreferrer">
+      <BotIcon />
+      </a>
     </div>
   );
 };

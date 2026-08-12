@@ -1,0 +1,490 @@
+.trav-ed-booking {
+  width: 100%;
+  padding: 100px 24px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.trav-ed-booking__container {
+  position: relative;
+  width: min(100%, 1180px);
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 72px 70px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 500px);
+  align-items: center;
+  gap: 70px;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(2, 105, 55, 0.025),
+      transparent 30%
+    ),
+    #f5f6f5;
+
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  border-radius: 22px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.06),
+    0 3px 12px rgba(0, 0, 0, 0.025);
+}
+
+
+/* --------------------------------
+   LEFT CONTENT
+-------------------------------- */
+
+.trav-ed-booking__content {
+  max-width: 455px;
+}
+
+.trav-ed-booking__eyebrow {
+  display: block;
+  margin-bottom: 11px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.11em;
+
+  color: #777;
+}
+
+.trav-ed-booking__content h2 {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(38px, 4vw, 55px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+
+  color: #151515;
+}
+
+.trav-ed-booking__content h2 strong {
+  font-weight: 700;
+}
+
+.trav-ed-booking__description {
+  max-width: 390px;
+  margin: 25px 0 30px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.8;
+
+  color: #777;
+}
+
+
+/* --------------------------------
+   CONTACT DETAILS
+-------------------------------- */
+
+.trav-ed-booking__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.trav-ed-booking__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.trav-ed-booking__icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #026937;
+  color: #ffffff;
+
+  box-shadow: 0 5px 12px rgba(2, 105, 55, 0.16);
+}
+
+.trav-ed-booking__contact-item span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.trav-ed-booking__contact-item small {
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  line-height: 1.4;
+  color: #999;
+}
+
+.trav-ed-booking__contact-item strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #353535;
+}
+
+
+/* --------------------------------
+   FORM CARD
+-------------------------------- */
+
+.trav-ed-booking__card {
+  position: relative;
+
+  width: 100%;
+  padding: 28px 28px 26px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  border: 1px solid rgba(0, 0, 0, 0.035);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.07),
+    0 3px 8px rgba(0, 0, 0, 0.025);
+}
+
+.trav-ed-booking__card form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+
+/* --------------------------------
+   FIELDS
+-------------------------------- */
+
+.trav-ed-booking__field {
+  width: 100%;
+}
+
+.trav-ed-booking__field label {
+  display: block;
+  margin-bottom: 5px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+
+  color: #666;
+}
+
+.trav-ed-booking__field input,
+.trav-ed-booking__field select,
+.trav-ed-booking__field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  background: #f5f5f5;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+
+  color: #333;
+
+  outline: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.trav-ed-booking__field input,
+.trav-ed-booking__field select {
+  height: 35px;
+  padding: 0 11px;
+}
+
+.trav-ed-booking__field textarea {
+  min-height: 68px;
+  padding: 10px 11px;
+  resize: vertical;
+}
+
+.trav-ed-booking__field input::placeholder,
+.trav-ed-booking__field textarea::placeholder {
+  color: #c0c0c0;
+}
+
+.trav-ed-booking__field input:focus,
+.trav-ed-booking__field select:focus,
+.trav-ed-booking__field textarea:focus {
+  background: #ffffff;
+  border-color: rgba(2, 105, 55, 0.25);
+
+  box-shadow:
+    0 0 0 3px rgba(2, 105, 55, 0.06);
+}
+
+.trav-ed-booking__field select {
+  appearance: none;
+  cursor: pointer;
+}
+
+
+/* --------------------------------
+   SELECT WITH ICON
+-------------------------------- */
+
+.trav-ed-booking__select-wrap {
+  position: relative;
+}
+
+.trav-ed-booking__select-wrap svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  color: #777;
+}
+
+.trav-ed-booking__select-wrap select {
+  padding-left: 30px;
+}
+
+
+/* --------------------------------
+   TWO COLUMN FORM ROW
+-------------------------------- */
+
+.trav-ed-booking__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+
+/* --------------------------------
+   BUTTON
+-------------------------------- */
+
+.trav-ed-booking__button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  min-width: 168px;
+  height: 39px;
+
+  margin-top: 2px;
+  padding: 0 16px 0 5px;
+
+  gap: 9px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: #026937;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(2, 105, 55, 0.2);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.trav-ed-booking__button:hover {
+  background: #01562d;
+
+  box-shadow:
+    0 10px 25px rgba(2, 105, 55, 0.27);
+}
+
+.trav-ed-booking__button-icon {
+  width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #026937;
+
+  transition: transform 0.25s ease;
+}
+
+.trav-ed-booking__button:hover
+.trav-ed-booking__button-icon {
+  transform: translateX(2px);
+}
+
+
+/* --------------------------------
+   TABLET
+-------------------------------- */
+
+@media (max-width: 1050px) {
+  .trav-ed-booking {
+    padding: 80px 20px;
+  }
+
+  .trav-ed-booking__container {
+    padding: 60px 50px;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(360px, 440px);
+
+    gap: 45px;
+  }
+
+  .trav-ed-booking__content h2 {
+    font-size: clamp(38px, 5vw, 48px);
+  }
+}
+
+
+/* --------------------------------
+   MOBILE / SMALL TABLET
+-------------------------------- */
+
+@media (max-width: 800px) {
+  .trav-ed-booking {
+    padding: 65px 18px;
+  }
+
+  .trav-ed-booking__container {
+    min-height: auto;
+
+    padding: 50px 30px;
+
+    grid-template-columns: 1fr;
+    gap: 45px;
+
+    border-radius: 18px;
+  }
+
+  .trav-ed-booking__content {
+    max-width: 600px;
+  }
+
+  .trav-ed-booking__content h2 {
+    font-size: clamp(39px, 9vw, 52px);
+  }
+
+  .trav-ed-booking__description {
+    max-width: 520px;
+  }
+
+  .trav-ed-booking__card {
+    max-width: 560px;
+  }
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 520px) {
+  .trav-ed-booking {
+    padding: 45px 12px;
+  }
+
+  .trav-ed-booking__container {
+    padding: 38px 17px;
+
+    border-radius: 15px;
+
+    gap: 35px;
+  }
+
+  .trav-ed-booking__eyebrow {
+    font-size: 8px;
+  }
+
+  .trav-ed-booking__content h2 {
+    font-size: 39px;
+    line-height: 1;
+  }
+
+  .trav-ed-booking__description {
+    margin: 20px 0 25px;
+
+    font-size: 10px;
+    line-height: 1.75;
+  }
+
+  .trav-ed-booking__contact {
+    gap: 14px;
+  }
+
+  .trav-ed-booking__card {
+    padding: 22px 18px;
+    border-radius: 15px;
+  }
+
+  .trav-ed-booking__card form {
+    gap: 12px;
+  }
+
+  .trav-ed-booking__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .trav-ed-booking__button {
+    width: 100%;
+  }
+}
+
+
+/* --------------------------------
+   VERY SMALL DEVICES
+-------------------------------- */
+
+@media (max-width: 360px) {
+  .trav-ed-booking__container {
+    padding: 32px 14px;
+  }
+
+  .trav-ed-booking__content h2 {
+    font-size: 34px;
+  }
+
+  .trav-ed-booking__card {
+    padding: 20px 14px;
+  }
+}

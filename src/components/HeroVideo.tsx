@@ -34,7 +34,7 @@ export default function HeroSection() {
           loop
           playsInline
           // replace with your video source or poster image for fallback
-          src="https://www.ieduconsultants.com/wp-content/uploads/2020/10/university-drone-view.mp4"
+          src="/School-drove-view.mp4"
         />
         <div className="hero-video-overlay" />
       </div>

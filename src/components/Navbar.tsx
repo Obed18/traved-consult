@@ -134,12 +134,12 @@ const Navbar: React.FC = () => {
                     exit={{ opacity: 0, y: 10 }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <Link className="dropdown-link" to="/services/university-application" onClick={() => setOpenDropdown(null)}>University Application</Link>
-                    <Link className="dropdown-link" to="/services/visa-assistance" onClick={() => setOpenDropdown(null)}>Visa Assistance</Link>
-                    <Link className="dropdown-link" to="/services/academic-support" onClick={() => setOpenDropdown(null)}>Academic Support</Link>
-                    <Link className="dropdown-link" to="/services/test-preparation" onClick={() => setOpenDropdown(null)}>Test Preparation</Link>
-                    <Link className="dropdown-link" to="/services/career-job-support" onClick={() => setOpenDropdown(null)}>Career and Job Support</Link>
-                    <Link className="dropdown-link" to="/services/counselling-search" onClick={() => setOpenDropdown(null)}>Counselling & Search</Link>
+                    <Link className="dropdown-link" to="/services/research-academic-assistance" onClick={() => setOpenDropdown(null)}>Research and Academic Assistance</Link>
+                    <Link className="dropdown-link" to="/services/cultural-exchanges-conferences-events" onClick={() => setOpenDropdown(null)}>Cultural Exchanges, Conferences and Events</Link>
+                    <Link className="dropdown-link" to="/services/business-travel-vacations-tours" onClick={() => setOpenDropdown(null)}>Business Travel, Vacations and Tours</Link>
+                    <Link className="dropdown-link" to="/services/flight-booking-accommodation-travel-arrangements" onClick={() => setOpenDropdown(null)}>Flight Booking, Accommodation and Travel Arrangements</Link>
+                    <Link className="dropdown-link" to="/services/visa-facilitation" onClick={() => setOpenDropdown(null)}>Visa Facilitation</Link>
+                    <Link className="dropdown-link" to="/services/university-selection-counselling-application-support" onClick={() => setOpenDropdown(null)}>University Selection Counselling & Application Support</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -240,12 +240,12 @@ const Navbar: React.FC = () => {
                     exit={{ opacity: 0, y: 10 }}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <Link className="dropdown-link" to="/services/university-application" onClick={() => setOpenDropdown(null)}>University Application</Link>
-                    <Link className="dropdown-link" to="/services/visa-assistance" onClick={() => setOpenDropdown(null)}>Visa Assistance</Link>
-                    <Link className="dropdown-link" to="/services/academic-support" onClick={() => setOpenDropdown(null)}>Academic Support</Link>
-                    <Link className="dropdown-link" to="/services/test-preparation" onClick={() => setOpenDropdown(null)}>Test Preparation</Link>
-                    <Link className="dropdown-link" to="/services/career-job-support" onClick={() => setOpenDropdown(null)}>Career and Job Support</Link>
-                    <Link className="dropdown-link" to="/services/counselling-search" onClick={() => setOpenDropdown(null)}>Counselling & Search</Link>
+                    <Link className="dropdown-link" to="/services/research-academic-assistance" onClick={() => setOpenDropdown(null)}>Research and Academic Assistance</Link>
+                    <Link className="dropdown-link" to="/services/cultural-exchanges-conferences-events" onClick={() => setOpenDropdown(null)}>Cultural Exchanges, Conferences and Events</Link>
+                    <Link className="dropdown-link" to="/services/business-travel-vacations-tours" onClick={() => setOpenDropdown(null)}>Business Travel, Vacations and Tours</Link>
+                    <Link className="dropdown-link" to="/services/flight-booking-accommodation-travel-arrangements" onClick={() => setOpenDropdown(null)}>Flight Booking, Accommodation and Travel Arrangements</Link>
+                    <Link className="dropdown-link" to="/services/visa-facilitation" onClick={() => setOpenDropdown(null)}>Visa Facilitation</Link>
+                    <Link className="dropdown-link" to="/services/university-selection-counselling-application-support" onClick={() => setOpenDropdown(null)}>University Selection Counselling & Application Support</Link>
                   </motion.div>
                 )}
               </AnimatePresence>

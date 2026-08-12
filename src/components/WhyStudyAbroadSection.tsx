@@ -1,78 +1,159 @@
-// WhyStudyAbroadSection.tsx
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
-  BookOpen,
-  TrendingUp,
-  User,
   GraduationCap,
-  HeartHandshake,
-  Globe,
-  Sparkles,
+  BriefcaseBusiness,
+  UsersRound,
+  BookOpenCheck,
+  Users,
+  Globe2,
+  Plane,
 } from "lucide-react";
 import "../styles/WhyStudyAbroadSection.css";
 
-const reasons = [
-  { icon: BookOpen, text: "Quality Education" },
-  { icon: TrendingUp, text: "Wide Career Opportunities" },
-  { icon: User, text: "Personal Development" },
-  { icon: GraduationCap, text: "Graduate School Admissions" },
-  { icon: HeartHandshake, text: "Make Lifelong Friends" },
-  { icon: Globe, text: "Creates Global Mindset & Worldwide Exposure" },
-  { icon: Sparkles, text: "Life Experience" },
+const benefits = [
+  {
+    id: "01",
+    title: "Quality Education",
+    description:
+      "Access internationally recognized universities with innovative teaching methods and globally respected qualifications.",
+    icon: GraduationCap,
+    featured: false,
+  },
+  {
+    id: "02",
+    title: "Career Opportunities",
+    description:
+      "Expand your professional network and unlock employment opportunities across international markets.",
+    icon: BriefcaseBusiness,
+    featured: false,
+  },
+  {
+    id: "03",
+    title: "Personal Development",
+    description:
+      "Build confidence, independence, resilience, and valuable life skills through new experiences.",
+    icon: UsersRound,
+    featured: true,
+  },
+  {
+    id: "04",
+    title: "Graduate Admissions",
+    description:
+      "Strengthen your academic profile for postgraduate and research opportunities worldwide.",
+    icon: BookOpenCheck,
+    featured: false,
+  },
+  {
+    id: "05",
+    title: "Lifelong Friendships",
+    description:
+      "Create meaningful relationships with people from diverse cultures and backgrounds.",
+    icon: Users,
+    featured: false,
+  },
+  {
+    id: "06",
+    title: "Global Mindset",
+    description:
+      "Develop cultural awareness and broaden your perspective through worldwide exposure.",
+    icon: Globe2,
+    featured: true,
+  },
+  {
+    id: "07",
+    title: "Life Experience",
+    description:
+      "Travel, explore, and embrace unforgettable experiences that shape your future beyond the classroom.",
+    icon: Plane,
+    featured: true,
+  },
 ];
 
-export default function WhyStudyAbroadSection() {
+const container: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const item: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+export default function WhyStudyAbroad() {
   return (
-    <section className="why-section">
-      <div className="overlay" />
-
-      <motion.div
-        className="content-card"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <motion.h2
-          className="title"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+    <section className="why-study">
+      <div className="why-container">
+        <motion.div
+          className="why-header"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
         >
-          Why Study Abroad
-        </motion.h2>
+          <span className="section-tag">WHY STUDY ABROAD</span>
 
-        <motion.p
-          className="subtitle"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+          <h2>
+            The world becomes <span>your classroom.</span>
+          </h2>
+
+          <p>
+            Studying abroad opens doors to exceptional education, international
+            careers, personal growth, and unforgettable life experiences that
+            prepare you for a truly global future.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="benefits-grid"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
         >
-          Studying abroad gives you the opportunity to experience the world as
-          your classroom.
-        </motion.p>
+          {benefits.map((benefit) => {
+            const Icon = benefit.icon;
 
-        <ul className="reasons">
-          {reasons.map((item, index) => {
-            const Icon = item.icon;
             return (
-              <motion.li
-                key={index}
-                className="reason-item"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.08 }}
-                viewport={{ once: true }}
+              <motion.div
+                key={benefit.id}
+                variants={item}
+                whileHover={{ y: -8 }}
+                className={`benefit-card ${
+                  benefit.featured ? "featured" : ""
+                }`}
               >
-                <span className="icon-wrap">
-                  <Icon size={22} strokeWidth={1.8} />
-                </span>
-                <span>{item.text}</span>
-              </motion.li>
+                <div className="card-top">
+                  <span className="card-number">{benefit.id}</span>
+
+                  <div className="icon-box">
+                    <Icon size={24} strokeWidth={2} />
+                  </div>
+                </div>
+
+                <h3>{benefit.title}</h3>
+
+                <p>{benefit.description}</p>
+
+                <div className="card-glow" />
+              </motion.div>
             );
           })}
-        </ul>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -2,32 +2,68 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #1d3054;
-  color: white;
-  padding: 3px;
+  width: 58px;
+  height: 58px;
+  background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   z-index: 1000;
   transition: transform 0.2s ease;
+  justify-content: center;
   align-items: center;
   display: flex;
-}
-
-.bot-icon:hover {
-  transform: scale(1.1);
-  background-color: #026937;
-  color: #0c162d;
+  border: 3px solid #ffffff;
+  overflow: hidden;
 }
 
 .chat-support-wrapper {
   position: fixed;
   bottom: 90px; /* Adjust to appear above the bot icon */
   right: 20px;
-  z-index: 1100; /* Higher than the bot icon */
+  z-index: 1100;
+  display: flex;
 }
 .agent-image {
-  height: 50px;
-  width: 50px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 50%;
+}
+
+.bot-icon-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.bot-icon-text {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  display: Flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  text-align: left;
+}
+.bot-icon-sub-text {
+  color: rgb(22, 178, 8);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+}
+.bot-icon-active{
+  position: absolute;
+  top: 6px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background-color: #00ff00; /* Green color for active status */
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  z-index: 20000000;
+  overflow: visible; /* Border to match the bot icon background */
 }
