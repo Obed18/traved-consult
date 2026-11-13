@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Menu, X, Phone, MapPin, ChevronDown, Mail, BadgeInfo } from "lucide-react";
+import { Menu, X, Phone, MapPin, Mail, BadgeInfo } from "lucide-react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
@@ -28,11 +28,7 @@ const sidebarVariants: Variants = {
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<
-    "services" | null
-  >(null);
 
-  const servicesRef = useRef<HTMLLIElement | null>(null);
   const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   /* ================= SCROLL EFFECT ================= */
@@ -46,14 +42,6 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        openDropdown &&
-        servicesRef.current &&
-        !servicesRef.current.contains(e.target as Node)
-      ) {
-        setOpenDropdown(null);
-      }
-
-      if (
         menuOpen &&
         sidebarRef.current &&
         !sidebarRef.current.contains(e.target as Node)
@@ -65,7 +53,7 @@ const Navbar: React.FC = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () =>
       document.removeEventListener("mousedown", handleClickOutside);
-  }, [openDropdown, menuOpen]);
+  }, [menuOpen]);
 
   return (
     <header className="courier-header">
@@ -111,38 +99,8 @@ const Navbar: React.FC = () => {
               <Link to="/">Home</Link>
             </li>
 
-            {/* SERVICES DROPDOWN */}
-            <li
-              className="dropdown"
-              ref={servicesRef}
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "services"
-                    ? null
-                    : "services"
-                )
-              }
-            >
-              Services <ChevronDown size={14} />
-
-              <AnimatePresence>
-                {openDropdown === "services" && (
-                  <motion.div
-                    className="dropdown-menu"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Link className="dropdown-link" to="/services/research-academic-assistance" onClick={() => setOpenDropdown(null)}>Research and Academic Assistance</Link>
-                    <Link className="dropdown-link" to="/services/cultural-exchanges-conferences-events" onClick={() => setOpenDropdown(null)}>Cultural Exchanges, Conferences and Events</Link>
-                    <Link className="dropdown-link" to="/services/business-travel-vacations-tours" onClick={() => setOpenDropdown(null)}>Business Travel, Vacations and Tours</Link>
-                    <Link className="dropdown-link" to="/services/flight-booking-accommodation-travel-arrangements" onClick={() => setOpenDropdown(null)}>Flight Booking, Accommodation and Travel Arrangements</Link>
-                    <Link className="dropdown-link" to="/services/visa-facilitation" onClick={() => setOpenDropdown(null)}>Visa Facilitation</Link>
-                    <Link className="dropdown-link" to="/services/university-selection-counselling-application-support" onClick={() => setOpenDropdown(null)}>University Selection Counselling & Application Support</Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <li>
+              <Link to="/services">Services</Link>
             </li>
 
             <li>
@@ -217,38 +175,10 @@ const Navbar: React.FC = () => {
                     Home
                   </Link>
                 </li>
-            {/* SERVICES DROPDOWN */}
-            <li
-              className="dropdown"
-              ref={servicesRef}
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "services"
-                    ? null
-                    : "services"
-                )
-              }
-            >
-              Services <ChevronDown size={14} />
-
-              <AnimatePresence>
-                {openDropdown === "services" && (
-                  <motion.div
-                    className="dropdown-menu"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <Link className="dropdown-link" to="/services/research-academic-assistance" onClick={() => setOpenDropdown(null)}>Research and Academic Assistance</Link>
-                    <Link className="dropdown-link" to="/services/cultural-exchanges-conferences-events" onClick={() => setOpenDropdown(null)}>Cultural Exchanges, Conferences and Events</Link>
-                    <Link className="dropdown-link" to="/services/business-travel-vacations-tours" onClick={() => setOpenDropdown(null)}>Business Travel, Vacations and Tours</Link>
-                    <Link className="dropdown-link" to="/services/flight-booking-accommodation-travel-arrangements" onClick={() => setOpenDropdown(null)}>Flight Booking, Accommodation and Travel Arrangements</Link>
-                    <Link className="dropdown-link" to="/services/visa-facilitation" onClick={() => setOpenDropdown(null)}>Visa Facilitation</Link>
-                    <Link className="dropdown-link" to="/services/university-selection-counselling-application-support" onClick={() => setOpenDropdown(null)}>University Selection Counselling & Application Support</Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <li>
+              <Link to="/services" onClick={() => setMenuOpen(false)}>
+                Services
+              </Link>
             </li>
                 <li>
                   <Link

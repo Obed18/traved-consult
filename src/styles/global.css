@@ -3,3 +3,10 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+.link-text{
+  text-decoration: none;
+  color: inherit;
+}
+.home{
+  padding-top: 4rem;
+}

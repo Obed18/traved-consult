@@ -5,7 +5,6 @@
 }
 .courier-header {
   width: 100%;
-  border-bottom: 1px solid #eee;
   font-family: "Poppins", sans-serif;
   position: fixed;
   z-index: 100;

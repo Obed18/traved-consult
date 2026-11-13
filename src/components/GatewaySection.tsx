@@ -2,6 +2,8 @@ import React from "react";
 import { Globe, GraduationCap, Plane, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import "../styles/GatewaySection.css";
+import { Link } from "react-router-dom";
+
 
 const GatewaySection: React.FC = () => {
   return (
@@ -32,10 +34,11 @@ const GatewaySection: React.FC = () => {
             TravEd Consult – Making global opportunities accessible, one journey
             at a time.
           </p>
-
+          <Link to="/services" className="link-text">
           <button className="gateway-btn">
             Get Started <ArrowRight size={18} />
           </button>
+          </Link>
         </motion.div>
 
         {/* Right Cards */}

@@ -42,9 +42,17 @@ const WhyTravedSection = () => {
               admission, visa guidance, and travel arrangements.</span> 
           </p>
         </motion.div>
+        <div className="why-action">
+          <img
+            className="why-action-image"
+            src="/images/students-abroad.jpg"
+            alt="Students celebrating their study abroad journey"
+            loading="lazy"
+          />
           <Link to="/book" className="signin-link2">
             APPLY NOW
           </Link>
+        </div>
       </motion.div>
     </section>
   );

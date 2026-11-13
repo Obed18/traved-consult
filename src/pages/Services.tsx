@@ -3,20 +3,15 @@ import { useParams } from "react-router-dom";
 import "../styles/home.css";
 
 import Navbar from "../components/Navbar";
-import ServicesSection from "../components/ServicesSection";
+import Destinations from "../components/Destinations";
 import ServiceTemplate from "../components/ServiceTemplate";
 import Footer from "../components/Footer";
+import ConsultationSection from "../components/ConsultationSection";
 import BotIcon from "../components/BotIcon";
-import ChatSupport from "../components/ChatSupport";
 import { SERVICES } from "../data/services";
 
 const Services: React.FC = () => {
-  const [showChat, setShowChat] = useState<boolean>(false);
   const { id } = useParams<{ id?: string }>();
-
-  const toggleChat = (): void => {
-    setShowChat((prev) => !prev);
-  };
 
   // Find service by ID
   const selectedService = id ? SERVICES.find((s) => s.id === id) : null;
@@ -28,8 +23,9 @@ const Services: React.FC = () => {
         {selectedService ? (
           <ServiceTemplate service={selectedService} />
         ) : (
-          <ServicesSection />
+          <Destinations />
         )}
+        <ConsultationSection />
         <Footer />
       </div>
 

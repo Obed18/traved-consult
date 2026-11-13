@@ -22,7 +22,7 @@ const slides: Slide[] = [
   {
     id: 1,
     image:
-      "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/02/16/08/University_graduation_GETTY.jpg",
+      "https://i.pinimg.com/1200x/6c/21/5a/6c215abad054f70396d7c6ec7c3bdfe3.jpg",
     eyebrow: "Study Abroad",
     title: "Applications Ongoing!",
     subtitle:
@@ -31,7 +31,7 @@ const slides: Slide[] = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85",
+      "https://i.pinimg.com/1200x/06/38/ee/0638ee58331a27256ad1a35507baea29.jpg",
     eyebrow: "Your Future Starts Here",
     title: "Study Abroad With Confidence",
     subtitle:
@@ -173,14 +173,14 @@ const HeroSlider = () => {
                 }}
               >
                 <Link to="/book" className="hero-primary-btn">
-                <button className="hero-primary-btn">
+                <button className="second-hero-primary-btn">
                   Enquire Now
                   <ArrowRight size={18} />
                 </button>
                 </Link>
 
                 <Link to="#services" className="hero-primary-btn">
-                <button className="hero-secondary-btn">
+                <button className="second-hero-secondary-btn">
                   Explore Opportunities
                 </button>
                 </Link>

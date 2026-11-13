@@ -58,27 +58,53 @@
 }
 
 .gateway-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
   transition: 0.3s ease;
 }
 
+.gateway-card:nth-child(1) {
+  background-image:
+    linear-gradient(145deg, rgba(5, 20, 17, 0.58), rgba(5, 20, 17, 0.82)),
+    url("../../public/blog2.jpg");
+}
+
+.gateway-card:nth-child(2) {
+  background-image:
+    linear-gradient(145deg, rgba(5, 20, 17, 0.58), rgba(5, 20, 17, 0.82)),
+    url("../../public/blog1.jpg");
+}
+
+.gateway-card:nth-child(3) {
+  background-image:
+    linear-gradient(145deg, rgba(5, 20, 17, 0.58), rgba(5, 20, 17, 0.82)),
+    url("../../public/article.jpg");
+}
+
 .gateway-card svg {
-  color: #026937;
+  color: #d7f3e2;
   margin-bottom: 10px;
 }
 
 .gateway-card h4 {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
-  color: #222;
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: #fff;
 }
 
 .gateway-card p {
+  margin: 0;
   font-size: 0.9rem;
-  color: #666;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .gateway-card:hover {

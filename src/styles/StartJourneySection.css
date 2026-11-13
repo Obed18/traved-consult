@@ -1,135 +1,627 @@
+
+/* =========================================
+   START JOURNEY SECTION
+========================================= */
+
 .journey-section {
-  padding: 80px 20px;
-  background: #f9fbfa;
+  width: 100%;
+  padding: 65px 24px;
+  background: #f6f7f6;
+  overflow: hidden;
+  font-family: inherit;
 }
 
 .journey-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-/* LEFT */
-.journey-left h2 {
-  font-size: 2.2rem;
-  color: #026937;
-  margin-bottom: 10px;
-}
-
-.intro {
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
-.check-list {
-  margin: 15px 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.check-list li {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
-.cta-text {
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-.button-group {
-  margin: 20px 0;
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
-}
-
-.btn.primary {
-  background: #026937;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background: #014d29;
-}
-
-.btn.outline {
-  border: 1px solid #026937;
-  color: #026937;
-  background: transparent;
-}
-
-.btn.outline:hover {
-  background: #026937;
-  color: #fff;
-}
-
-/* WHO CAN APPLY */
-.who-can-apply {
-  margin-top: 30px;
-}
-
-.who-can-apply h3 {
-  margin-bottom: 10px;
-  color: #026937;
-}
-
-/* RIGHT FORM */
-.journey-right {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 48px;
   background: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(350px, 0.95fr);
+  gap: 65px;
+  align-items: stretch;
+  position: relative;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.035);
 }
 
-.journey-right h3 {
-  margin-bottom: 10px;
-  color: #026937;
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.journey-left {
+  min-width: 0;
+  padding: 8px 0 10px;
 }
+
+.journey-heading {
+  margin-bottom: 40px;
+}
+
+.journey-eyebrow {
+  display: inline-block;
+  color: #026937;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.journey-heading h2 {
+  color: #132b23;
+  font-size: clamp(29px, 3vw, 39px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -1.2px;
+  margin: 0 0 14px;
+}
+
+.journey-heading > p {
+  color: #626a66;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0;
+}
+
+/* =========================================
+   FORM
+========================================= */
 
 .journey-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 25px;
+  width: 100%;
+}
+
+.journey-field {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 15px;
+  min-width: 0;
 }
 
-.journey-form input,
-.journey-form select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 0.9rem;
+.journey-field label {
+  color: #202722;
+  font-size: 15px;
+  font-weight: 700;
 }
 
-.journey-form input:focus,
-.journey-form select:focus {
-  outline: none;
-  border-color: #026937;
-}
-
-.btn.full {
+.journey-field input,
+.journey-field select {
   width: 100%;
-  margin-top: 10px;
+  height: 60px;
+  padding: 0 21px;
+  border: 1.5px solid #e2e6e3;
+  border-radius: 40px;
+  outline: none;
+  background: #ffffff;
+  color: #28332c;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .journey-container {
-    grid-template-columns: 1fr;
+.journey-field input::placeholder {
+  color: #929b95;
+  opacity: 1;
+}
+
+.journey-field select {
+  color: #929b95;
+  cursor: pointer;
+  padding-right: 45px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23026937' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.journey-field select:valid {
+  color: #28332c;
+}
+
+.journey-field input:hover,
+.journey-field select:hover {
+  border-color: #a3c7b1;
+}
+
+.journey-field input:focus,
+.journey-field select:focus {
+  border-color: #026937;
+  box-shadow: 0 0 0 4px rgba(2, 105, 55, 0.08);
+}
+
+.journey-submit {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.journey-submit-btn {
+  min-width: 230px;
+  min-height: 63px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 40px;
+  background: #026937;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(2, 105, 55, 0.14);
+}
+
+.journey-submit-btn:hover {
+  background: #014f29;
+  box-shadow: 0 12px 25px rgba(2, 105, 55, 0.22);
+}
+
+.journey-form-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  color: #7d8780;
+  font-size: 12px;
+}
+
+.journey-form-note svg {
+  flex-shrink: 0;
+  color: #026937;
+}
+
+/* =========================================
+   RIGHT GREEN INFORMATION PANEL
+========================================= */
+
+.journey-right {
+  background: #026937;
+  color: #ffffff;
+  border-radius: 40px;
+  padding: 55px 42px 40px;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  isolation: isolate;
+  box-shadow: 0 15px 35px rgba(2, 105, 55, 0.13);
+}
+
+.journey-right-content {
+  position: relative;
+  z-index: 2;
+}
+
+.journey-icon-circle {
+  width: 53px;
+  height: 53px;
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.journey-right h3 {
+  color: #ffffff;
+  font-size: clamp(25px, 2.2vw, 31px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin: 0 0 13px;
+}
+
+.journey-right-intro {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.83);
+  margin: 0 0 30px;
+}
+
+/* =========================================
+   SUPPORT CARDS
+========================================= */
+
+.journey-support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.journey-support-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 19px;
+  padding: 17px 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.journey-support-card:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateX(5px);
+}
+
+.journey-support-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.journey-support-text {
+  min-width: 0;
+}
+
+.journey-support-text h4 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.journey-support-text p {
+  color: rgba(255, 255, 255, 0.83);
+  font-size: 12px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.journey-right-divider {
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.32);
+  margin: 32px 0 26px;
+}
+
+/* =========================================
+   ELIGIBILITY
+========================================= */
+
+.journey-eligibility-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.journey-eligibility-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journey-eligibility-heading h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.journey-eligibility > p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0 0 15px;
+}
+
+.journey-eligibility ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 10px;
+}
+
+.journey-eligibility li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.journey-eligibility li svg {
+  color: #b7e8c8;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   RIGHT PANEL FOOTER
+========================================= */
+
+.journey-right-footer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.journey-footer-text {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.journey-consult-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 17px;
+  background: #ffffff;
+  color: #026937;
+  border: none;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journey-consult-btn:hover {
+  background: #e9f4ed;
+}
+
+/* =========================================
+   BACKGROUND DECORATIONS
+========================================= */
+
+.journey-decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.journey-decoration-one {
+  width: 240px;
+  height: 240px;
+  top: -130px;
+  right: -100px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.journey-decoration-two {
+  width: 180px;
+  height: 180px;
+  bottom: -110px;
+  left: -80px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1100px) {
+  .journey-section {
+    padding: 45px 20px;
   }
 
-  .button-group {
+  .journey-container {
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.9fr);
+    gap: 35px;
+    padding: 35px;
+  }
+
+  .journey-right {
+    padding: 40px 27px 30px;
+    border-radius: 30px;
+  }
+
+  .journey-support-card {
+    padding: 14px;
+    gap: 11px;
+  }
+
+  .journey-support-text h4 {
+    font-size: 13px;
+  }
+
+  .journey-support-text p {
+    font-size: 11px;
+  }
+
+  .journey-right-footer {
+    align-items: flex-start;
     flex-direction: column;
   }
-} 
+}
+
+/* =========================================
+   SMALL TABLETS
+========================================= */
+
+@media (max-width: 800px) {
+  .journey-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 35px;
+  }
+
+  .journey-left {
+    padding: 0;
+  }
+
+  .journey-right {
+    padding: 40px;
+  }
+
+  .journey-heading h2 {
+    font-size: 34px;
+  }
+
+  .journey-right h3 {
+    font-size: 30px;
+  }
+
+  .journey-support-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journey-support-card {
+    align-items: flex-start;
+    min-height: 105px;
+  }
+
+  .journey-right-footer {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+  .journey-section {
+    padding: 25px 13px;
+  }
+
+  .journey-container {
+    padding: 25px 19px;
+    gap: 30px;
+    border-radius: 23px;
+  }
+
+  .journey-heading {
+    margin-bottom: 27px;
+  }
+
+  .journey-eyebrow {
+    font-size: 10px;
+  }
+
+  .journey-heading h2 {
+    font-size: 28px;
+    letter-spacing: -0.7px;
+  }
+
+  .journey-heading > p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .journey-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .journey-field {
+    gap: 9px;
+  }
+
+  .journey-field label {
+    font-size: 14px;
+  }
+
+  .journey-field input,
+  .journey-field select {
+    height: 55px;
+    font-size: 13px;
+    padding-left: 17px;
+  }
+
+  .journey-submit {
+    justify-content: stretch;
+  }
+
+  .journey-submit-btn {
+    width: 100%;
+    min-height: 57px;
+  }
+
+  .journey-right {
+    padding: 30px 21px;
+    border-radius: 25px;
+  }
+
+  .journey-right h3 {
+    font-size: 27px;
+  }
+
+  .journey-right-intro {
+    font-size: 13px;
+  }
+
+  .journey-support-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .journey-support-card {
+    min-height: auto;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .journey-support-text h4 {
+    font-size: 13px;
+  }
+
+  .journey-support-text p {
+    font-size: 11px;
+  }
+
+  .journey-eligibility ul {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .journey-right-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .journey-consult-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-section *,
+  .journey-section *::before,
+  .journey-section *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -10,7 +10,7 @@ import TeamSection from "../components/TeamSection";
 import AboutHero from "../components/AboutHero";
 import ConsultationSection from "../components/ConsultationSection";
 import SpecialtySection from "../components/SpecialtySection";
-import MissionVision from "../components/MissionVision";
+// import MissionVision from "../components/MissionVision";
 import ImpactSection from "../components/ImpactSection";
 import StudyAbroadSection from "../components/StudyAbroadSection";
 import GatewaySection from "../components/GatewaySection";
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         <AboutHero />
         <WhyTraved />
         <SpecialtySection />
-        <MissionVision />
+        {/* <MissionVision /> */}
         <ImpactSection />
         <StudyAbroadSection />
         <GatewaySection />

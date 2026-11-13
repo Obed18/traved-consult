@@ -6,15 +6,18 @@ import Blog from "./pages/Blog";
 import Book from "./pages/Book";
 import Contact from "./pages/Contact";
 import FAQS from "./pages/FAQS";
-
+import ScrollToTop from "./components/ScrollToTop";
 import Services from "./pages/Services";
 import ServiceTemplate from "./components/ServiceTemplate";
 import { SERVICES } from "./data/services";
+import SEO from "./components/SEO";
 import "./styles/global.css";
 
 const App: React.FC = () => {
   return (
     <Router>
+      <SEO />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

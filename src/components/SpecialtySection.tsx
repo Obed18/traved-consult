@@ -1,39 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  Globe2,
-  Building2,
-  Users2,
-} from "lucide-react";
 import "../styles/SpecialtySection.css";
-
-const stats = [
-  {
-    id: 1,
-    icon: GraduationCap,
-    value: "11",
-    label: "Schools Represented",
-  },
-  {
-    id: 2,
-    icon: Globe2,
-    value: "9",
-    label: "Countries",
-  },
-  {
-    id: 3,
-    icon: Building2,
-    value: "Offices",
-    label: "Worldwide Presence",
-  },
-  {
-    id: 4,
-    icon: Users2,
-    value: "10",
-    label: "Team Members",
-  },
-];
+import { Link } from "react-router-dom";
 
 const SpecialtySection: React.FC = () => {
   return (
@@ -64,7 +32,7 @@ const SpecialtySection: React.FC = () => {
             expert guidance, and global support services across
             multiple countries.
           </p>
-
+          <Link to="/services" className="link-text">
           <motion.button
             className="specialty-btn"
             whileHover={{ scale: 1.05 }}
@@ -72,41 +40,23 @@ const SpecialtySection: React.FC = () => {
           >
             Explore Opportunities
           </motion.button>
+          </Link>
         </motion.div>
 
-        {/* Right Stats */}
+        {/* Right Image */}
         <motion.div
-          className="specialty-stats"
+          className="specialty-visual"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          {stats.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <motion.div
-                key={item.id}
-                className="specialty-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.15,
-                }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-              >
-                <div className="specialty-icon">
-                  <Icon size={28} />
-                </div>
-
-                <h3>{item.value}</h3>
-                <p>{item.label}</p>
-              </motion.div>
-            );
-          })}
+          <img
+            className="specialty-image"
+            src="/blog1.jpg"
+            alt="Students exploring an international destination together"
+            loading="lazy"
+          />
         </motion.div>
       </div>
     </section>

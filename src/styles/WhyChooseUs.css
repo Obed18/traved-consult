@@ -1,93 +1,431 @@
+
+/* =========================================
+   WHY CHOOSE US - INFOGRAPHIC SECTION
+========================================= */
+
 .why-section {
-  padding: 80px 20px;
-  background: #f9fbfa;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #f6f7f7;
+  padding: 95px 24px 110px;
+  font-family: inherit;
 }
 
-.container {
-  max-width: 1200px;
+.why-container {
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
+
+/* =========================================
+   HEADER
+========================================= */
 
 .why-header {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  max-width: 750px;
-  margin: 0 auto 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.why-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #657b83;
+  margin-bottom: 20px;
+}
+
+.eyebrow-line {
+  width: 30px;
+  height: 2px;
+  background: #026937;
+  border-radius: 10px;
 }
 
 .why-header h2 {
-  font-size: 2.3rem;
+  color: #20282c;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
   font-weight: 700;
+  letter-spacing: -1.6px;
+  margin: 0 auto 18px;
+  max-width: 750px;
+}
+
+.why-header h2 span {
   color: #026937;
-  margin-bottom: 15px;
 }
 
 .why-header p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+  color: #858b8e;
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-/* Grid */
+/* =========================================
+   CONNECTOR LINES
+========================================= */
+
+.why-connectors {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  padding: 0 35px;
+  height: 115px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.why-connector {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.why-connector::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 80px;
+  background: currentColor;
+  opacity: 0.75;
+}
+
+.why-connector::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #f6f7f7;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.why-connector span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.connector-blue {
+  color: #557986;
+}
+
+.connector-red {
+  color: #cf2938;
+}
+
+.connector-teal {
+  color: #159d92;
+}
+
+/* =========================================
+   CARD GRID
+========================================= */
+
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 55px 45px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* Cards */
+/* =========================================
+   CARD
+========================================= */
+
 .why-card {
+  position: relative;
+  min-height: 455px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  isolation: isolate;
+}
+
+/* Colored circular ring */
+
+.why-card-ring {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  height: 285px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: transform 0.45s ease;
+}
+
+.why-card.blue .why-card-ring {
+  background: #557987;
+}
+
+.why-card.red .why-card-ring {
+  background: #d51e30;
+}
+
+.why-card.teal .why-card-ring {
+  background: #169e93;
+}
+
+.why-card:hover .why-card-ring {
+  transform: translateX(-50%) scale(1.04);
+}
+
+/* White pill */
+
+.why-card-inner {
+  width: 77%;
+  min-height: 420px;
+  margin-top: 48px;
+  padding: 55px 25px 35px;
   background: #ffffff;
-  padding: 25px;
-  border-radius: 16px;
-  text-align: left;
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
+  border-radius: 100px;
+  box-shadow:
+    9px 13px 22px rgba(0, 0, 0, 0.10),
+    0 3px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.35s ease;
 }
 
-.why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+.why-card:hover .why-card-inner {
+  box-shadow:
+    12px 18px 30px rgba(0, 0, 0, 0.13),
+    0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
-/* Icon */
-.why-card .icon {
-  width: 55px;
-  height: 55px;
-  background: rgba(2, 105, 55, 0.1);
-  color: #026937;
+/* =========================================
+   ICONS
+========================================= */
+
+.why-icon {
+  width: 76px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 }
 
-/* Text */
-.why-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: #222;
+.why-card.blue .why-icon {
+  color: #557987;
 }
 
-.why-card p {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
+.why-card.red .why-icon {
+  color: #d51e30;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+.why-card.teal .why-icon {
+  color: #159d92;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.why-card-inner h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #303a3e;
+  margin: 0 0 15px;
+  max-width: 210px;
+}
+
+.why-card.red .why-card-inner h3 {
+  color: #bd2835;
+}
+
+.why-card.teal .why-card-inner h3 {
+  color: #168f87;
+}
+
+.why-card-inner p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #a0a4a5;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.why-card-number {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #c6cbcc;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1050px) {
+  .why-section {
+    padding: 80px 25px;
+  }
+
   .why-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 780px;
+  }
+
+  .why-connectors {
+    display: none;
+  }
+
+  .why-card {
+    min-height: 430px;
+  }
+
+  .why-card-inner {
+    width: 75%;
+    min-height: 400px;
+  }
+
+  .why-card-ring {
+    height: 265px;
   }
 }
 
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
 @media (max-width: 600px) {
+  .why-section {
+    padding: 70px 17px 80px;
+  }
+
+  .why-header {
+    margin-bottom: 50px;
+  }
+
   .why-header h2 {
-    font-size: 1.8rem;
+    font-size: 31px;
+    letter-spacing: -0.8px;
+  }
+
+  .why-header p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .why-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
   }
 
   .why-grid {
     grid-template-columns: 1fr;
+    gap: 50px;
+    max-width: 390px;
+    padding: 0;
+  }
+
+  .why-card {
+    min-height: 405px;
+  }
+
+  .why-card-ring {
+    width: 85%;
+    height: 255px;
+  }
+
+  .why-card-inner {
+    width: 76%;
+    min-height: 385px;
+    margin-top: 42px;
+    padding: 48px 25px 30px;
+  }
+
+  .why-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 22px;
+  }
+
+  .why-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .why-card-inner h3 {
+    font-size: 19px;
+  }
+
+  .why-card-inner p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .why-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .why-header h2 {
+    font-size: 27px;
+  }
+
+  .why-card-inner {
+    width: 82%;
+  }
+
+  .why-card-ring {
+    width: 92%;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .why-card,
+  .why-card-ring,
+  .why-card-inner,
+  .why-icon {
+    transition: none !important;
   }
 }

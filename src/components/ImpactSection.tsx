@@ -1,36 +1,7 @@
 import React from "react";
 import "../styles/ImpactSection.css";
-
-import {
-  GraduationCap,
-  Globe2,
-  Users,
-  BadgeCheck,
-  ArrowRight,
-} from "lucide-react";
-
-const impactStats = [
-  {
-    icon: GraduationCap,
-    value: "5,000+",
-    label: "Students Guided",
-  },
-  {
-    icon: Globe2,
-    value: "20+",
-    label: "Global Destinations",
-  },
-  {
-    icon: Users,
-    value: "100+",
-    label: "Partner Institutions",
-  },
-  {
-    icon: BadgeCheck,
-    value: "95%",
-    label: "Success Rate",
-  },
-];
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const ImpactSection: React.FC = () => {
   return (
@@ -64,27 +35,21 @@ const ImpactSection: React.FC = () => {
             </p>
           </div>
 
-          <button className="impact-btn">
-            Explore Success Stories <ArrowRight size={18} />
-          </button>
+          <Link to="/services" className="link-text">
+            <button className="impact-btn">
+              Explore our services <ArrowRight size={18} />
+            </button>
+          </Link>
         </div>
 
         {/* RIGHT */}
         <div className="impact-right">
-          {impactStats.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <div className="impact-card" key={index}>
-                <div className="impact-icon">
-                  <Icon size={28} />
-                </div>
-
-                <h3>{item.value}</h3>
-                <p>{item.label}</p>
-              </div>
-            );
-          })}
+          <img
+            className="impact-image"
+            src="/images/students-abroad.jpg"
+            alt="Students celebrating their international education journey"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
