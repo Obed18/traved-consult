@@ -1,5 +1,4 @@
 node_modules/
 
-# Keep the large local video out of GitHub's 100 MB file limit.
-public/School-drove-view.mp4
+# Netlify recreates this generated copy during the production build.
 build/School-drove-view.mp4
