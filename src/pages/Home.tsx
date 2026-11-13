@@ -10,7 +10,7 @@ import HeroVideo from "../components/HeroVideo";
 import Footer from "../components/Footer";
 import BotIcon from "../components/BotIcon";
 // import ConsultationSection from "../components/ConsultationSection";
-// import TGEFSection from "../components/TGEFSection";
+import PartnersSection from "../components/PartnersSection";
 import ReadyToStudySection from "../components/ReadyToStudySection";
 
 
@@ -19,10 +19,10 @@ const Home: React.FC = () => {
     <div className="home">
       <div className= "main-content">
         <Navbar />
-        <HeroVideo />
         <HeroSlider />
         <Destinations />
         <WhyStudyAbroadSection />
+        <PartnersSection />
         {/* <TGEFSection />
         <PartnerUniversities /> */}
         <ReadyToStudySection />
