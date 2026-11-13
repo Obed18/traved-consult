@@ -75,7 +75,7 @@ export default function HeroSection() {
       </div>
 
       {/* Placeholder next section id for scroll */}
-      <div id="next-section" style={{ height: "90vh" }}></div>
+      <div id="next-section" style={{ height: "69vh" }}></div>
     </section>
   );
 }
